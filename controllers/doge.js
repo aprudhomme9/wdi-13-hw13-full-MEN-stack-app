@@ -64,5 +64,10 @@ router.get('/:index/edit', (req, res) => {
 	})
 })
 
+router.put('/:index', (req, res) => {
+	Doge.findByIdAndUpdate(req.params.index, req.body, (err, updatedDog) => {
+		res.redirect('/doge');
+	})
+})
 
 module.exports = router;

@@ -31,7 +31,7 @@ router.post('/', (req, res) => {
 		}
 	})
 })
-
+// show route. renders show page at doge/:index
 router.get('/:index', (req, res) => {
 	Doge.findById(req.params.index, (err, foundDog) => {
 		if(err) {
@@ -44,13 +44,13 @@ router.get('/:index', (req, res) => {
 		}
 	})
 })
-
+// delete route
 router.delete('/:index', (req, res) => {
 	Doge.findByIdAndRemove(req.params.index, (err, removedDog) => {
 		res.redirect('/doge');
 	})
 })
-
+// update route --> to edit page
 router.get('/:index/edit', (req, res) => {
 	Doge.findById(req.params.index, (err, foundDog) => {
 		if(err) {

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog Show Page</title>
+</head>
+<body>
+	<h1>Look at this boy!</h1>
+	<h3>Name: <%=dog.name%></h3>
+	<h3>Breed: <%=dog.breed%></h3>
+	<h3>Weight: <%=dog.weight%></h3>
+	<h3>Favorite Food: <%=dog.favoriteFood%></h3>
+	<br>
+	<br>
+	<form action="/doge/<%=dog.id%>?_method=DELETE" method="POST">
+		<button type="submit">Delete</button>
+	</form>
+	<br>
+	<a href="/doge/<%=dog.id%>/edit">Edit Your Guy</a>
+</body>
+</html>

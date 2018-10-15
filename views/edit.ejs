@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="/css/app.css">
+    </head>
+    <body>
+        <h1>Edit Your Doge!</h1>
+        <form method='POST' action='/doge/<%=id%>?_method=PUT'>
+        <!--  NOTE: the form is pre-populated with values for the server-->
+            Name: <input type="text" name="name" value="<%=dog.name%>"/><br/>
+            Breed: <input type="text" name="breed" value="<%=dog.breed%>"/><br/>
+            Weight: <input type="text" name="weight" value="<%=dog.weight%>"><br>
+            Favorite Food: <input type="text" name="favoriteToy" value="<%=dog.favoriteFood%>">
+            <br/>
+                <input type="submit" name="" value="Submit Changes"/>
+        </form>
+    </body>
+</html>

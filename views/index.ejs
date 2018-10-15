@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doge Index Page</title>
+</head>
+<body>
+	<h1>Good Boys</h1>
+	<!-- These link to each show page -->
+	<%dogs.forEach((el, i) => { %>
+		<ul>
+			<li><a href="/doge/<%=dogs[i].id%>"><%=el.name%></a></li>
+		</ul>
+	<% })%>
+</body>
+</html>
